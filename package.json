@@ -1,0 +1,23 @@
+{
+  "name": "backend-avanzado-mango",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisLechuga55/backend-avanzado-mango.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisLechuga55/backend-avanzado-mango/issues"
+  },
+  "homepage": "https://github.com/LuisLechuga55/backend-avanzado-mango#readme",
+  "dependencies": {
+    "mongoose": "^6.4.2"
+  }
+}
