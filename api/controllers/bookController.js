@@ -76,10 +76,26 @@ const deleteAuhorById = async (req, res) => {
   }
 };
 
+const bookSWithAuthors = async (req, res) => {
+  try {
+    const booksWithAuthors = await Book.find().populate('authors');
+    return res.json({
+      msg: 'Libros con autores encontrados',
+        books: booksWithAuthors,
+    })
+  } catch (error) {
+    return res.status(500).json({
+      msg: 'Ha ocurrido un error al consultar los libros'
+    })
+  }
+};
+
+
 export {
   getAllBooks,
   createBook,
   getBookById,
   updateBookById,
   deleteAuhorById,
+  bookSWithAuthors,
 };
