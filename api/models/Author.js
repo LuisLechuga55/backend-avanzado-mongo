@@ -1,4 +1,4 @@
-import mongoose, { mongo, Mongoose } from "mongoose";
+import mongoose from 'mongoose';
 
 const authorSchema = new mongoose.Schema({
   name: String,
@@ -10,4 +10,3 @@ const authorSchema = new mongoose.Schema({
 const AuthorModel = mongoose.model('Author', authorSchema);
 
 export default AuthorModel;
-

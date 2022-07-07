@@ -1,12 +1,15 @@
-
 /**
-* Instancia principal de express
-*/
+ * Instancia principal de express
+ */
 
 import express from 'express';
-import { authorRoutes } from './routes/index.js'
+import { authorRoutes } from './routes/index.js';
+import { bookRoutes } from './routes/index.js';
 
 const api = express();
+
+api.use(express.json());
+api.use(express.urlencoded({ extended: true }));
 
 api.get('/', (_, res) => {
   return res.json({
@@ -15,5 +18,6 @@ api.get('/', (_, res) => {
 });
 
 api.use(authorRoutes);
+api.use(bookRoutes);
 
 export default api;

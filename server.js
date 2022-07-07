@@ -1,9 +1,10 @@
 /**
-* TODO: server http importando api
-*/
+ * TODO: server http importando api
+ */
 import http from 'http';
 
 import api from './api/api.js';
+import database from './config/database.js';
 
 import config from './config/index.js';
 
@@ -23,13 +24,4 @@ server.on('listening', onListening);
 server.on('error', onError);
 
 server.listen(serverCnf.port);
-
-class Book {
-  getAllLibros
-  getLibroById
-  updateLibroById
-}
-
-// Object (js)
-// Document (lo que antes conociamos como fila/registro/row)
-// Mapping ()
+database();
